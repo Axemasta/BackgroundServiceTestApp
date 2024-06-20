@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<pages:BasePage
+    Padding="20"
+    x:Class="BackgroundServiceTestApp.Pages.BackgroundTestPage"
+    x:DataType="viewmodels:BackgroundTestViewModel"
+    x:TypeArguments="viewmodels:BackgroundTestViewModel"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:pages="clr-namespace:BackgroundServiceTestApp.Pages"
+    xmlns:viewmodels="clr-namespace:BackgroundServiceTestApp.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="20">
+            <Label FontSize="Large" Text="Test Shiny Background Jobs" />
+
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Service Lifecycle" />
+                <Button Command="{Binding StartCommand}" Text="Start Service" />
+                <Button Command="{Binding StopCommand}" Text="Stop Service" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Actions" />
+                <Button Command="{Binding QueueItemCommand}" Text="Queue Item" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</pages:BasePage>
